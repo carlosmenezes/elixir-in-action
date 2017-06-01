@@ -26,7 +26,7 @@ defmodule TailRecursion do
     filter_positives(h, t)
   end
 
-  defp filter_positives(head, []), do: []
+  defp filter_positives(_, []), do: []
 
   defp filter_positives(number, [h | t]) when number < 0 do
     filter_positives(h, t)
