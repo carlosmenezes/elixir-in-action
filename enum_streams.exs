@@ -24,9 +24,6 @@ defmodule EnumStreams do
     |> Enum.max_by(&(String.length(elem(&1, 0))))
   end
 
-  # words_per_line!/1 that returns a list of numbers, with each number represent-
-  # ing the word count in a file. Hint: to get the word count of a line, use length(String.split(line)).
-
   def words_per_line!(file) do
     File.stream!(file)
     |> Stream.map(fn(line) ->
